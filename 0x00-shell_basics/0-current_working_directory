@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
-echo "pwd"
-=======
 pwd
->>>>>>> 8c3b207654cc715365ab1038db159dfb8959a63f
