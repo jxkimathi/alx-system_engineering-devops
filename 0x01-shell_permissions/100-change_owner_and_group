@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown vincent:staff
+chown vincent:staff /tmp/h$
