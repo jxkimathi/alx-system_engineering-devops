@@ -1,2 +1,2 @@
 #!/bin/bash
-adduser vincent groupadd staff
+chown vincent chgrp staff
