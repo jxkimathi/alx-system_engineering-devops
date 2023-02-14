@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'FNR==NR{lines[$0]=1;next} !($0 in lines)' file1 file2
+comm -23 <(sort -u file1.txt) <(sort -u file2.txt) > file3.txt
