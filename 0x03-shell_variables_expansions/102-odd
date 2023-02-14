@@ -1,2 +1,2 @@
 #!/bin/bash
-comm -23 <(sort -u file1.txt) <(sort -u file2.txt) > file3.txt
+paste -d, - - | cut -d, -f1
