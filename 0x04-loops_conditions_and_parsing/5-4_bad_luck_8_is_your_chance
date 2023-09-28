@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Loops from 1-10 and prints different at 4th and 8th
+
+count=0
+
+while [ $count -lt 10 ]
+do
+    if [ $count -eq 3 ]
+    then
+        echo "bad luch"
+    elif [ $count -eq 7 ]
+    then
+        echo "good luck"
+    else
+        echo "Best School"
+    fi
+    (( count++ ))
+done
