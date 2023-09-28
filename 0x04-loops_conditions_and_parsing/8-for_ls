@@ -2,7 +2,6 @@
 # Displays the contents of the current directory in list format
 
 list=$(ls)
-for i in $list;
-do
+for i in $list; do
     echo "$i" | cut -d '-' -f2
 done
