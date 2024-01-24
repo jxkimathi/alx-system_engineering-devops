@@ -3,7 +3,7 @@
 
 file { '/etc/ssh/ssh_config':
   ensure  => present,
-  content => "host*
+  content => "host *
     IdentityFile ~/.ssh/school
     PasswordAuthentication no"
 }
