@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Commands used to fix the issue
 
-service apache2 -k start
+service apache2 start
