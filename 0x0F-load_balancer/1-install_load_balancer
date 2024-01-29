@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Sets up the HAProxy
+
+sudo apt-get update
+sudo apt-get install -y haproxy
+
+sudo tee | /etc/haroxy/haproxy.cfg > /dev/null << EOT
+
+global
+    daemon
+    maxconn 256
+
+defaults
+    mode http
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+
+frontend http_front
+    bind *:80
+    default_backend http_back
+
+backend http_back
+    balance roundrobin
+    server 254938-web-01 52.72.14.96 check
+    server 254938-web-02 52.91.119.190 check
+EOT
+
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+
+sudo systemctl start haproxy
+
+sudo systemctl enable haproxy
