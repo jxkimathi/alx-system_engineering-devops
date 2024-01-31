@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Making the fix short
+
+ln -s /etc/nginx/sites-available/default etc/nginx/sites-enabled/default
+service nginx restart
+kill "$(pgrep 'nginx' | head -1)"
