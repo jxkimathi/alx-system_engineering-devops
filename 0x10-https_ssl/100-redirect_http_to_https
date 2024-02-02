@@ -36,6 +36,7 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
+
 frontend http_front
     bind *:80
     mode http
@@ -50,5 +51,5 @@ frontend http_front-https
 
 backend http_back
     balance roundrobin
-    server 254938-web-01 52.72.14.96 check
-    server 254938-web-02 52.91.119.190 check
+    server 254938-web-01 52.72.14.96:80 check
+    server 254938-web-02 52.91.119.190:80 check
