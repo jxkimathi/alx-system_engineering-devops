@@ -8,6 +8,10 @@ global
         group haproxy
         daemon
 
+        # New commands
+        maxconn 2048
+        tune.ssl.default-dh-param 2048
+
         # Default SSL material locations
         ca-base /etc/ssl/certs
         crt-base /etc/ssl/private
@@ -40,7 +44,7 @@ frontend http_front
     default_backend http_back
 
 frontend http_front-https
-    bind *:433 ssl crt /etc/haproxy/certs/www.jukisystems.tech
+    bind *:433 ssl crt /etc/haproxy/certs/www.jukisystems.tech.pem
     http-request set-header X-Forwarded-Proto https
     default_backend http_back
 
