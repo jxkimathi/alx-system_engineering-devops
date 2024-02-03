@@ -26,3 +26,4 @@ sudo nginx -t
 
 # Restart the configuration files
 sudo service nginx restart
+
