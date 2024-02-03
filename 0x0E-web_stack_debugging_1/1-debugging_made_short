@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Making the fix short
-ln -s /etc/nginx/sites-available/default etc/nginx/sites-enabled/default
-service nginx restart
-kill "$(pgrep 'nginx' | head -1)"
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo service nginx start
+sudo echo "" > /run/nginx.pid
+
