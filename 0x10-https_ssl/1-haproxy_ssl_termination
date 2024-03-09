@@ -51,6 +51,5 @@ frontend http_front-https
 
 backend http_back
     balance roundrobin
-    server 254938-web-01 52.72.14.96:80 check
-    server 254938-web-02 52.91.119.190:80 check
-
+    server 254938-web-01 52.204.145.159 check
+    server 254938-web-02 54.237.81.200 check
