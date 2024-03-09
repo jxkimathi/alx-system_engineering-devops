@@ -14,8 +14,8 @@ frontend http_front
     default_backend http_back
 backend http_back
     balance roundrobin
-    server 254938-web-01 52.72.14.96 check
-    server 254938-web-02 52.91.119.190 check
+    server 254938-web-01 52.204.145.159 check
+    server 254938-web-02 54.237.81.200 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
