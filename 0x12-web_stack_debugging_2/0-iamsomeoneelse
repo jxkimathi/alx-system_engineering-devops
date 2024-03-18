@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Accepts one arg and returns 'whoami'
+su "$1" -s /bin/bash -c 'whoami'
