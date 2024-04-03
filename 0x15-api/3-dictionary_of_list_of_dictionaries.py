@@ -15,4 +15,4 @@ if __name__ == "__main__":
                 "username": u.get("username")
             } for job in requests.get(url + "todos",
                                       params={"userId": u.get("id")}).json()]
-        for u in users}, jsonfile)
+            for u in users}, jsonfile)
