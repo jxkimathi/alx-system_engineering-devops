@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     with open("todo_all_employees.json", "w") as jsonfile:
         json.dump({
-            user.get("id"): [{
+            u.get("id"): [{
                 "task": job.get("title"),
                 "completed": job.get("completed"),
                 "username": u.get("username")
