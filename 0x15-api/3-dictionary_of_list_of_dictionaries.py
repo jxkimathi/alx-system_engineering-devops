@@ -14,5 +14,5 @@ if __name__ == "__main__":
                 "completed": job.get("completed"),
                 "username": user.get("username")
             } for job in requests.get(url + "todos",
-                                      params={"userId": user.get("id")}).json()]
+                                    params={"userId": user.get("id")}).json()]
         for user in users}, jsonfile)
