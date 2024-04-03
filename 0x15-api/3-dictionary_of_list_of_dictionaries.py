@@ -12,7 +12,7 @@ if __name__ == "__main__":
             user.get("id"): [{
                 "task": job.get("title"),
                 "completed": job.get("completed"),
-                "username": user.get("username")
+                "username": u.get("username")
             } for job in requests.get(url + "todos",
-                                    params={"userId": user.get("id")}).json()]
-        for user in users}, jsonfile)
+                                      params={"userId": u.get("id")}).json()]
+        for u in users}, jsonfile)
