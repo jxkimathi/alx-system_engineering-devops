@@ -1,0 +1,29 @@
+You ever wondered what goes on behing the scenes in your browser whenever you type "https://www.google.com" and pree Enter?
+
+Well today we are going knee deep to find ut what exactly happens so buckle up and let's take ajourney through it.
+
+1. DNS Request:
+Your browser first send a DNS (Domain Name System) request to resolve the domain name "www.google.com" into an IP address which is routed to the public DNS resolver.
+
+2. TCP/IP:
+Once the IP addres is got from there, the browser establishes a TCP(Transmission Control Protocol) connection with the server hosting the website. TCP breaks data into packets and reassembles them at the destination, ensurng reliable data transmission.
+
+3. Firewall:
+The TCP connection passes through your firewall on its way to the Google servers which monitor the incoming and outgoing traffic based on the security rules set in place. This ensures only authorized traffic is allowed through.
+
+4. HTTPS/SSL:
+The browser and the server initiate a secure connection using the HTTPS protocal which encrypts the data exchanged between the browser and the server to protect it from tampering and eavesdropping. The encryption is facilitated by the SSL.
+
+5. Load-Balancer:
+The load balancer then distributes the incoming traffic across multiple servers which ensures an efficient use of resources and helps maintain high availability and performance. The load balancer receives incoming requests and forards them to the least busy server.
+
+6. Web Server:
+Once the request reaches the Google Web Servers, it is processed to retrieve the requested web page. The web server retrievesthe HTML, CSS, JavaScript and other assets comprising the webpage.
+
+7. Application Server:
+The Application Server executes necessary logic whenit comes to fetching dynamic content and generates it dynamically before sending it back to the web server for client delivery
+
+8. Database:
+If the content required is stored in a database, the application server querries he database to retrieve the relevant information. This could include, but is not limited to user profiles and search results.
+
+After going through the numerous steps, we find that a lot actually goes on under the hood of a single web search. From the DNS resolution all through to database querries, all steps play a crucial role in ensuring that you get the web content you requested securely and efficiently. This goes to show just how meticulous and profound technology at the current age is. 
