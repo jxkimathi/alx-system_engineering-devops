@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Recursive function that returns a list containing titles of all hot articles"""
+"""Recursive function that returns a list containing titles"""
 
 import requests
 
